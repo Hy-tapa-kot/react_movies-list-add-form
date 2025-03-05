@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
-import './App.scss';
-import moviesFromServer from './api/movies.json';
-import { MoviesList } from './components/MoviesList';
-import { NewMovie } from './components/NewMovie';
-import { Movie } from './types/Movie';
+import './App.scss'
+import moviesFromServer from './api/movies.json'
+import { MoviesList } from './components/MoviesList'
+import { NewMovie } from './components/NewMovie'
+import { Movie } from './types/Movie'
 
 export const App: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>(moviesFromServer);
@@ -12,6 +12,7 @@ export const App: React.FC = () => {
   const handleAddMovie = (movie: Movie) => {
     setMovies([...movies, movie]);
   };
+
 
   return (
     <div className="page">
